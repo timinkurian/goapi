@@ -11,7 +11,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleRequests() {
-	http.HandleFunc("/hello", sayHello)
+	http.HandleFunc("/", sayHello)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
